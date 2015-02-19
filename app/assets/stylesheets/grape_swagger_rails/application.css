@@ -3,3 +3,7 @@
 *= require ./screen
 *= require_self
 */
+
+ .response-content-type {
+ 	display: none;
+ }
