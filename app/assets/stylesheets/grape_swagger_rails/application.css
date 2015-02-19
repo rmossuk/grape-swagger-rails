@@ -4,6 +4,6 @@
 *= require_self
 */
 
- .response-content-type {
+ .response-content-type, .top-response-class {
  	display: none;
  }
