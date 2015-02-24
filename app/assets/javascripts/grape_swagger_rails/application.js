@@ -11,3 +11,4 @@
 //= require ./highlight.7.3.pack
 //= require ./swagger-oauth
 //= require ./base64
+//= require ./jquery-ui
