@@ -84,12 +84,13 @@
 	  });
 	  
 	  $('pre').live( "mouseover", function() {
-	    tog = $('.toggle-height');
-	    tog.clone().prependTo($(this));
-	    
+	    if ($(this).find('.toggle-height').count == 0) {
+	    	tog = $('.toggle-height');
+	    	tog.clone().prependTo($(this));
+	    }
 	  });
 	  
-	  $('toggle-height').live( "dblclick", function() {
+	  $('.toggle-height').live( "click", function() {
 	    
 	    pn = $(this).parent('pre')
 	    if (pn.css('max-height') == 'none') {
