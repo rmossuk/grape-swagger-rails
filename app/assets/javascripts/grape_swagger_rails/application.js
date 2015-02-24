@@ -15,6 +15,9 @@
 
 
 $('pre').live( "dblclick", function() {
-  debugger;
-  $('pre').css('max-height', 'none');
+  if ($(this).css('max-height') == 'none') {
+    $(this).css('max-height', '200px;');
+  }else {
+    $(this).css('max-height', 'none');
+  }
 });
