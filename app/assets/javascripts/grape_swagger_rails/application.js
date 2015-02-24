@@ -41,6 +41,46 @@ $(function() {
       }
   }    
   
+function replaceParam(key, value){
+  var pathname = window.location.pathname;
+  var params = toParams(window.location.search);
+  params[key] = value;
+
+  return pathname + "?" + jQuery.param(params)
+}
+
+function toParams(searchUrl) {
+  var result = {}
+  if(searchUrl == '')
+    return result;
+
+  var queryString = searchUrl.substr(1);
+
+  var params = queryString.split("&");
+
+  jQuery.each(params, function(index, param){
+    var keyPair = param.split("=");
+
+    var key = keyPair[0];
+    var value = keyPair[1];
+
+    if(result[key] == undefined)
+      result[key] = value
+    else{
+
+      if(result[key] instanceof Array) //current var is an array just push another to it
+        result[key].push(value)
+      else{ //duplicate var, then it must store as an array
+        result[key] = [result[key]]
+        result[key].push(value)
+      }
+    }
+  })
+
+  return result;
+
+}
+  
   the_token = getUrlParameter('token');
   
   if (the_token) {
@@ -49,11 +89,24 @@ $(function() {
     $('#token-set-token').html(the_token);
     $('#api_selector').hide();
     $('#input_apiKey').val(the_token);
+    $('.swagger-section #header').css('background-color', '#20B600')
   }else {
     alert('NAAAH');
     $('#api_selector').show();
     $('#token-set').hide();
+    $('.swagger-section #header').css('background-color', '#CD0000')
   }
+  
+  $('#change-token-lnk').live( "click", function() {
+    $('#api_selector').show();
+    $('#token-set').hide();
+    $('.swagger-section #header').css('background-color', '#CD0000')
+  });
+  
+  $('#set-token-btn').live( "click", function() {
+    var url = replaceParam('token', $('#input_apiKey').val());
+     window.location.href = url;
+  });
   
 
 });
