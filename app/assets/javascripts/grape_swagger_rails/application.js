@@ -45,13 +45,13 @@ $(function() {
   
   if (the_token) {
     alert('YEAH');
-    $('#token-form').hide();
     $('#token-set').show();
     $('#token-set-token').html(the_token);
+    $('#api_selector').hide();
     $('#input_apiKey').val(the_token);
   }else {
     alert('NAAAH');
-    $('#token-form').show();
+    $('#api_selector').show();
     $('#token-set').hide();
   }
   
