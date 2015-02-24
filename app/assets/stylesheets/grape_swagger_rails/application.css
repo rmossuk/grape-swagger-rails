@@ -8,6 +8,6 @@
  	display: none;
  }
  
- .snippet {
+ .snippet, .response_body {
   position: relative !important;
  }
