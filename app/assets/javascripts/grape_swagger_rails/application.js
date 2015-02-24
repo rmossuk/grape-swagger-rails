@@ -88,6 +88,7 @@ function toParams(searchUrl) {
     $('#token-set-token').html(the_token);
     $('#api_selector').hide();
     $('#input_apiKey').val(the_token);
+    $('#input_apiKey').trigger('change')
     $('.swagger-section #header').css('background-color', '#20B600')
   }else {
     $('#api_selector').show();
