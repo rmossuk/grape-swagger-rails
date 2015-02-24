@@ -16,8 +16,10 @@
 
 $('pre').live( "dblclick", function() {
   if ($(this).css('max-height') == 'none') {
-    $(this).css('max-height', '200px;');
+    $(this).css('height', $(this).data('size'));
+    $(this).css('max-height', $(this).data('size'));
   }else {
+    $(this).data('size', $(this).css('max-height'))
     $(this).css('max-height', 'none');
   }
 });
