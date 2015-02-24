@@ -87,6 +87,8 @@ function toParams(searchUrl) {
     $('#token-set').show();
     $('#token-set-token').html(the_token);
     $('#api_selector').hide();
+    $('#input_apiKey').val("");
+    $('#input_apiKey').trigger('change')
     $('#input_apiKey').val(the_token);
     $('#input_apiKey').trigger('change')
     $('.swagger-section #header').css('background-color', '#20B600')
@@ -109,6 +111,10 @@ function toParams(searchUrl) {
     the_token = getUrlParameter('apiKey');
     $('#token-set').show();
     $('#token-set-token').html(the_token);
+    $('#input_apiKey').val("");
+    $('#input_apiKey').trigger('change')
+    $('#input_apiKey').val(the_token);
+    $('#input_apiKey').trigger('change')
     $('#api_selector').hide();
     $('.swagger-section #header').css('background-color', '#20B600')
   });
