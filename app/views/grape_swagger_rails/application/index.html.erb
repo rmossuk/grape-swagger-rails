@@ -85,8 +85,11 @@
 	  
 	  $('pre').live( "mouseover", function() {
 	    if ($(this).find('.toggle-height').length == 0) {
-	    	tog = $('.toggle-height');
-	    	tog.clone().prependTo($(this));
+	    	tog = $('.toggle-height-tmp');
+	    	togClone = tog.clone();
+	    	togClone.removeClass('toggle-height-tmp');
+	    	togClone.css('display', true);
+	    	togClone.prependTo($(this));
 	    }
 	  });
 	  
@@ -204,7 +207,7 @@
 
 </div>
 
-<div class="toggle-height" style="
+<div class="toggle-height toggle-height-tmp" style="
     background-color: rgb(228, 228, 228);
 float: right;
 color: white;
