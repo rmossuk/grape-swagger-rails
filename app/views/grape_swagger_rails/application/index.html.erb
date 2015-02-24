@@ -84,7 +84,7 @@
 	  });
 	  
 	  $('pre').live( "mouseover", function() {
-	    if ($(this).find('.toggle-height').count == 0) {
+	    if ($(this).find('.toggle-height').length == 0) {
 	    	tog = $('.toggle-height');
 	    	tog.clone().prependTo($(this));
 	    }
@@ -205,8 +205,10 @@
 </div>
 
 <div class="toggle-height" style="
-    background-color: red;
-    float: right;
+    background-color: rgb(228, 228, 228);
+float: right;
+color: white;
+padding: 10px;
 ">toggle height</div>
 
 </body>
