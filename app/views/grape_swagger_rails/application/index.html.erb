@@ -142,8 +142,10 @@
       } else {
         window.authorizations.add("key", null);
       }
-      
-      the_token = getUrlParameter('apiKey');
+     
+    });
+    
+    the_token = getUrlParameter('apiKey');
 	  
 	  if (the_token) {
 	    $('#token-set').show();
@@ -159,7 +161,6 @@
 	    $('#token-set').hide();
 	    $('.swagger-section #header').css('background-color', '#CD0000')
 	  }
-    });
 
     <% GrapeSwaggerRails.options.headers.each_pair do |key, value| %>
       <%=raw "window.authorizations.add('key', new ApiKeyAuthorization('#{CGI.escapeHTML(key)}', '#{CGI.escapeHTML(value)}', 'header'));" %>
