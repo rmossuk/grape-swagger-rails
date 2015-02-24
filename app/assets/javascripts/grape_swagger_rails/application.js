@@ -16,11 +16,12 @@
 
 $('pre').live( "dblclick", function() {
   if ($(this).css('max-height') == 'none') {
-    $(this).css('height', $(this).data('size'));
-    $(this).css('max-height', $(this).data('size'));
+    $(this).data('big-height', $(this).css('height'))
+    $(this).css('height', $(this).data('small-height'));
+    $(this).css('max-height', $(this).data('small-height'));
   }else {
-    $(this).data('size', $(this).css('max-height'))
+    $(this).data('small-height', $(this).css('max-height'))
     $(this).css('max-height', 'none');
-    $(this).css('max-height', 'initial');
+    $(this).css('height', $(this).data('big-height'));
   }
 });
