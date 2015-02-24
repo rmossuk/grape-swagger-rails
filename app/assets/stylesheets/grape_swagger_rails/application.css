@@ -7,3 +7,7 @@
  .response-content-type, .top-response-class {
  	display: none;
  }
+ 
+ .snippet {
+  position relative;
+ }
