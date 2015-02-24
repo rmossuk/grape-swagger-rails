@@ -84,7 +84,7 @@
 	  });
 	  
 	  $('pre').live( "mouseover", function() {
-	    if ($(this).find('.toggle-height').length == 0) {
+	    if (($(this).find('.toggle-height').length == 0) && ( $(this).height() > 150 )) {
 	    	tog = $('.toggle-height-tmp');
 	    	togClone = tog.clone();
 	    	togClone.removeClass('toggle-height-tmp');
