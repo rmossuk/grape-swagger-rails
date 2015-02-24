@@ -13,6 +13,7 @@
 //= require ./base64
 //= require_self
 
-$('pre').dblclick(function() {
+
+$('pre').live( "dblclick", function() {
   $('pre').css('max-height', 'none');
 });
