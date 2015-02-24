@@ -104,6 +104,12 @@ function toParams(searchUrl) {
   $('#set-token-btn').live( "click", function() {
     var url = replaceParam('apiKey', $('#input_apiKey').val());
      window.location.href = url;
+     
+    the_token = getUrlParameter('apiKey');
+    $('#token-set').show();
+    $('#token-set-token').html(the_token);
+    $('#api_selector').hide();
+    $('.swagger-section #header').css('background-color', '#20B600')
   });
   
 
