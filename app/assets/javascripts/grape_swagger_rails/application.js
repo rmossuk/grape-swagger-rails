@@ -84,14 +84,12 @@ function toParams(searchUrl) {
   the_token = getUrlParameter('apiKey');
   
   if (the_token) {
-    alert('YEAH');
     $('#token-set').show();
     $('#token-set-token').html(the_token);
     $('#api_selector').hide();
     $('#input_apiKey').val(the_token);
     $('.swagger-section #header').css('background-color', '#20B600')
   }else {
-    alert('NAAAH');
     $('#api_selector').show();
     $('#token-set').hide();
     $('.swagger-section #header').css('background-color', '#CD0000')
