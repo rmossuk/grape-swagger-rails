@@ -89,10 +89,9 @@
 	    var url = replaceParam('apiKey', $('#input_apiKey').val());
 	     window.location.href = url;
 	     
-	    the_token = getUrlParameter('apiKey');
+	    the_token = $('#input_apiKey').val();
 	    $('#token-set').show();
 	    $('#token-set-token').html(the_token);
-	    $('#input_apiKey').val(the_token);
 	    $('#input_apiKey').trigger('change')
 	    $('#api_selector').hide();
 	    $('.swagger-section #header').css('background-color', '#20B600')
