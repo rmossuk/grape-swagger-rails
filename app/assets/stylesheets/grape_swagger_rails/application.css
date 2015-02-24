@@ -11,3 +11,7 @@
  .snippet, .response_body {
   position: relative !important;
  }
+ 
+ .swagger-section #header form#api_selector .input input#input_apiKey {
+  width: 530px !important;
+ }
