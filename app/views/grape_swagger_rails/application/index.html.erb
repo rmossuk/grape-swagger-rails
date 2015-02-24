@@ -97,10 +97,12 @@
 	    
 	    pn = $(this).next('pre')
 	    if (pn.css('max-height') == 'none') {
+	      $(this).html('min');
 	      pn.data('big-height', pn.css('height'))
 	      pn.css('height', pn.data('small-height'));
 	      pn.css('max-height', pn.data('small-height'));
 	    }else {
+	      $(this).html('max');
 	      pn.data('small-height', pn.css('max-height'))
 	      pn.css('max-height', 'none');
 	      pn.css('height', pn.data('big-height'));
@@ -217,7 +219,7 @@ right: 100px;
 margin-top: 10px;
 display: none;
 cursor: pointer;
-">toggle height</div>
+">max</div>
 
 </body>
 
