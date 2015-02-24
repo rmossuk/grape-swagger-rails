@@ -81,7 +81,7 @@ function toParams(searchUrl) {
 
 }
   
-  the_token = getUrlParameter('token');
+  the_token = getUrlParameter('apiKey');
   
   if (the_token) {
     alert('YEAH');
@@ -104,7 +104,7 @@ function toParams(searchUrl) {
   });
   
   $('#set-token-btn').live( "click", function() {
-    var url = replaceParam('token', $('#input_apiKey').val());
+    var url = replaceParam('apiKey', $('#input_apiKey').val());
      window.location.href = url;
   });
   
