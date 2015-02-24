@@ -21,5 +21,6 @@ $('pre').live( "dblclick", function() {
   }else {
     $(this).data('size', $(this).css('max-height'))
     $(this).css('max-height', 'none');
+    $(this).css('max-height', 'initial');
   }
 });
