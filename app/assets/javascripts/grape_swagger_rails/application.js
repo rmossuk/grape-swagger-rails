@@ -43,10 +43,10 @@ $(function() {
   
   the_token = getUrlParameter('token');
   
-  if (the_token == '') {
-    alert('No token');
-  }else {
+  if (the_token) {
     alert('YEAH');
+  }else {
+    alert('NAAAH');
   }
   
 
