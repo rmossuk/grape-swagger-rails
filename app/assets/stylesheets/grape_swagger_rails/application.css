@@ -9,5 +9,5 @@
  }
  
  .snippet {
-  position relative;
+  position: relative !important;
  }
