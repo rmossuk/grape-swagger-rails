@@ -89,13 +89,13 @@
 	    	togClone = tog.clone();
 	    	togClone.removeClass('toggle-height-tmp');
 	    	togClone.css('display', true);
-	    	togClone.prependTo($(this));
+	    	togClone.insertBefore($(this));
 	    }
 	  });
 	  
 	  $('.toggle-height').live( "click", function() {
 	    
-	    pn = $(this).parent('pre')
+	    pn = $(this).next('pre')
 	    if (pn.css('max-height') == 'none') {
 	      pn.data('big-height', pn.css('height'))
 	      pn.css('height', pn.data('small-height'));
@@ -212,6 +212,10 @@
 float: right;
 color: white;
 padding: 10px;
+position: absolute;
+right: 90px;
+margin-top: 10px;
+display: none;
 ">toggle height</div>
 
 </body>
