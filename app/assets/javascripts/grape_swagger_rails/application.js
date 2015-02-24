@@ -45,8 +45,14 @@ $(function() {
   
   if (the_token) {
     alert('YEAH');
+    $('#token-form').hide();
+    $('#token-set').show();
+    $('#token-set-token').html(the_token);
+    $('#input_apiKey').val(the_token);
   }else {
     alert('NAAAH');
+    $('#token-form').show();
+    $('#token-set').hide();
   }
   
 
